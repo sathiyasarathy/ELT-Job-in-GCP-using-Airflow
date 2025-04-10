@@ -1,0 +1,19 @@
+------------------------------------------------------
+python3 -m venv ~/airflow-env
+
+source airflow-env/bin/activate
+
+pip3 install apache-airflow[gcp]
+
+
+pip install apache-airflow-providers-google
+
+python -c "from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator"
+
+cd airflow
+
+nohup airflow standalone > airflow.log
+
+username : admin  password: c3vyEHqmsNUsUsqF
+
+------------------------------------------------------------
